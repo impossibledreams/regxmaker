@@ -1,0 +1,656 @@
+<HTML>
+<HEAD><TITLE>RegXmaker User Guide V1.1</TITLE></HEAD>
+<BODY>
+
+<CENTER>
+<B>
+<BIG><BIG><U>RegXmaker User Guide</U></BIG><BR></B>
+<I>Copyright &copy 2001, 2004 SolidMatrix Technologies Inc.</I>
+<BR><BR>
+<SMALL>
+Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in a file called <A HREF="fdl.txt">"fdl.txt"</A>. You should have received a copy of the GNU Free Documentation License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA.</SMALL>
+<BR><BR>
+DOC. ID: YS-07162001-001-A.<BR></BIG>
+<BR><BR>
+<BIG><U>Table of Contents</U></I>
+
+</BIG></B></CENTER>
+
+<B>
+<A NAME="contents"></A>
+
+<UL>
+
+<LI><A HREF="#0">0. INTRODUCTION.</A>
+
+<UL>
+<LI><A HREF="#01">0.1. ABOUT REGULAR EXPRESSIONS.</A>
+<LI><A HREF="#02">0.2. OVERALL LAYOUT.</A>
+<LI><A HREF="#03">0.3. PROGRAM HISTORY.</A>
+<LI><A HREF="#04">0.4. KNOWN ISSUES.</A>
+<LI><A HREF="#05">0.5. SUPPORT INFORMATION.</A>
+<LI><A HREF="#06">0.6. REGISTRATION.</A>
+<LI><A HREF="#07">0.7. LICENSE.	</A>
+</UL>
+
+<LI><A HREF="#1">1. FILE MENU.</A>
+
+<UL>
+<LI><A HREF="#11"><IMG SRC="images/add-file-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>1.1. ADD FILE.</A>
+<LI><A HREF="#12"><IMG SRC="images/add-url-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.2. ADD URL.</A>
+<LI><A HREF="#13"><IMG SRC="images/add-string-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.3. ADD STRING.</A>
+<LI><A HREF="#14"><IMG SRC="images/outputfile-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.4. OUTPUT FILE.</A>
+<LI><A HREF="#15"><IMG SRC="images/outputfilec-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.5. CLEAR OUTPUT FILE.</A>
+<LI><A HREF="#16"><IMG SRC="images/process-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.6. PROCESS.</A>
+<LI><A HREF="#17"><IMG SRC="images/exit.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0> 1.7. EXIT.</A>
+</UL>
+
+<LI><A HREF="#2">2. LIST MENU.</A>
+
+<UL>
+<LI><A HREF="#21"><IMG SRC="images/preview-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>2.1. PREVIEW.</A>
+<LI><A HREF="#22"><IMG SRC="images/edit-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>2.2. EDIT.</A>
+<LI><A HREF="#23"><IMG SRC="images/remove-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>2.3. REMOVE.
+<LI><A HREF="#24"><IMG SRC="images/remove-all-16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>2.4. CLEAR.</A>
+</UL>
+
+<LI><A HREF="#3">3. EDIT MENU.</A>
+
+<UL>
+<LI><A HREF="#31"><IMG SRC="images/cut16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>3.1. CUT.</A>
+<LI><A HREF="#32"><IMG SRC="images/copy16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>3.2. COPY.</A>
+<LI><A HREF="#33"><IMG SRC="images/paste16.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>3.3. PASTE.</A>
+<LI><A HREF="#34">3.4. SELECT ALL.</A>
+<LI><A HREF="#35">3.5. WORD WRAP.</A>
+</UL>
+
+<LI><A HREF="#4">4. OPTIONS MENU.</A>
+
+<UL>
+<LI><A HREF="#41">4.1. COMPILE LEVEL.</A>
+<LI><A HREF="#42">4.2. ACCURACY LEVEL.</A>
+<LI><A HREF="#43">4.3. TEXT FORMAT.</A>
+</UL>
+
+<LI><A HREF="#5">5. CUSTOMIZE MENU.</A>
+
+<UL>
+<LI><A HREF="#51">5.1. TOOL BAR.</A>
+<LI><A HREF="#52">5.2. LIST TOOL BAR.</A>
+<LI><A HREF="#53">5.3. OUTLINE FRAME DRAGGING.</A>
+<LI><A HREF="#54">5.4. SET PROCESS TIMEOUT.</A>
+<LI><A HREF="#55">5.5. LOAD SETTINGS ON STARTUP.</A>	
+<LI><A HREF="#56">5.6. SAVE SETTINGS ON EXIT</A>
+<LI><A HREF="#57">5.7. SAVE SETTINGS.</A>
+<LI><A HREF="#58">5.8. LOAD SETTINGS.</A>
+</UL>
+
+<LI><A HREF="#6">6. WINDOW MENU.</A>
+
+<UL>
+<LI><A HREF="#61"><IMG SRC="images/cascade.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>6.1. CASCASE.</A>
+<LI><A HREF="#62"><IMG SRC="images/vertical.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>6.2. TILE VERTICAL.</A>
+<LI><A HREF="#63"><IMG SRC="images/horizontal.gif" ALIGN=ABSBOTTOM HSPACE=8 BORDER=0>6.3. TILE HORIZONTAL.</A>
+<LI><A HREF="#64">6.4. CLOSE ALL.</A>
+<LI><A HREF="#65">6.5. MORE WINDOWS.</A>
+</UL>
+
+<LI><A HREF="#7">7. HELP MENU.</A>
+
+<UL>
+<LI><A HREF="#71">7.1. USER GUIDE.</A>
+<LI><A HREF="#72">7.2. LICENSE.</A>
+<LI><A HREF="#73">7.3. REGISTER.</A>
+<LI><A HREF="#74">7.4. ABOUT.</A>
+</UL>
+
+<LI><A HREF="#8">8. COMMAND-LINE VERSION.</A>
+
+</UL></b>
+
+<BIG><BIG><B><A NAME="0">0. Introduction.</A></B></BIG></BIG><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you using RegXmaker. This utility is designed to help people with using regular-expressions (sometimes called "regex" or RE). The tool is not designed to do all the work for you, rather it helps you generate regex and then you can modify them for your needs. The initial construction gives you something to work with rather than starting from scratch. RegXmaker compiles regex based on strings, URLs and files that you provide. It compares them and generates a regex that will match data in those sources. RegXmaker is able to process information from files, user-entered strings and URLs. There are also several options available to specify how accurate the regex should be, or how closely the regex matches. These options are described later on in this document. Please note that due to many factors RegXmaker is not able to load files and URLs larger than 8 megabytes. Due to the processing speed of RegXmaker it is not recommended to process files and URLs larger than half of a megabyte in size because this may require a long period of time.<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you have any questions or comments please feel free to visit our website at <A HREF="http://www.solidmatrix.com">www.solidmatrix.com </A> or email us at <A HREF="mailto:research@solidmatrix.com">research@solidmatrix.com</A>.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="01">0.1. About Regular Expressions.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regular expressions are like a language designed to describe patterns of characters in text. They are used to identify, extract or substitute specific strings within a larger body of text. You can ask questions such as "Does this string match the pattern?" and also use regex to modify strings, or to split strings apart in various ways. A common use is to extract email addresses or links from HTML documents. This can be done much faster when using regular expressions than writing the code from scratch. Regular expressions are an essential part of many scripting languages used on the Web today such as Perl, Python, PHP and others. It is also used extensively within the UNIX world. Regex modules are available for virtually any language and platform ranging from UNIX-based shell scripts to Microsoft's Visual Basic. RegXmaker closely mimics the syntax of regular expressions as they are used in Perl (visit <A HREF="http://www.perl.com">www.perl.com</A> for more information).<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A regular expression is a  pattern of logical notation that represents a set of possible strings. For example given two strings "Today is Monday" and "Yesterday was Sunday" a simple regular expression can be produced that matched either string ("/Today is .*n.*day/"). This string is deciphered as follows: "/" indicates start and end of regex, "Today is " is section of the text that must be present, ".*" indicates that any characters in any number can be present followed by letter "n", another set of any characters followed by the word "day". This regex is not very exact so it can match things like "Today is any day" or "Today is a nice day". To get more exact results you must be precise when writing REs.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="02">0.2. Overall Layout.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The program window is split into several sections. On the top is the menu accessible by pressing F10 (not ALT like in Windows). Below the menu is a horizontal toolbar contain commands from the File and Edit menus. The program screen is split into two sections: the left white section contains the list of data sources that are being used to generate the regex and the right blue section contains the results windows. On the left side of the list section is a vertical toolbar with icons corresponding to the List menu. These commands are used to manage data sources in the list. All icons on the toolbars have a description that can be displayed by putting the mouse arrow on top of the icon (not clicking). Toolbars can be removed by using the Customize menu and can float if you click and drag the toolbar by clicking on their left edge. To dock floating toolbars you must close them by clicking on the close button on the top right edge. Sometimes the vertical list toolbar will dock horizontally instead. This is normal behavior.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="03">0.3. Program History.</A></B></BIG></I><BR><BR>
+
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=10 BORDERCOLOR="#CCCCCC">
+<TR BGCOLOR="#CCCCCC" ALIGN=CENTER><TD WIDTH="30%"><B>Date</B></TD><TD WIDTH="10%"><B>Version</B></TD><TD WIDTH="60%"><B>Description</B></TD></TR>
+
+<TR ALIGN=CENTER>
+<TD>July 5th, 2004</TD>
+<TD>1.1</TD>
+<TD ALIGN=LEFT>Released under open source licensing</TD>
+</TR>
+
+
+<TR ALIGN=CENTER>
+<TD>August 6th, 2001</TD>
+<TD>1.0</TD>
+<TD ALIGN=LEFT>First public release</TD>
+</TR>
+
+<TR ALIGN=CENTER>
+<TD>July 17th, 2001</TD>
+<TD>0.90</TD>
+<TD ALIGN=LEFT>First beta release</TD>
+</TR>
+
+</TABLE>
+
+<BR>
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="04">0.4. Known Issues.</A></B></BIG></I><BR><BR>
+
+<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=10 BORDERCOLOR="#CCCCCC">
+<TR BGCOLOR="#CCCCCC" ALIGN=CENTER><TD WIDTH="30%"><B>Date</B></TD><TD WIDTH="10%"><B>Version</B></TD><TD WIDTH="60%"><B>Description</B></TD></TR>
+
+<TR ALIGN=CENTER>
+<TD>July 17, 2001</TD>
+<TD>0.90 BETA</TD>
+<TD ALIGN=LEFT>Floating toolbars do not remain on top of the application window. This bug is currently under investigation.</TD>
+</TR>
+
+</TABLE>
+
+<BR>
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="05">0.5. Support Information.</A></B></I></BIG><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a project of SolidMatrix Research. Technical support is not provided, although online forums and mailing lists may be provided. Please visit our website at www.solidmatrix.com for more information.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="06">0.6. Registration.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This information is no longer applicable..<BR><BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="07">0.7. License.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please see the enclosed <A HREF="license.html">license agreement</A> or and by selecting the "License" option in "Help" menu. The RegXmaker library is licensed under the <A HREF="lgpl.txt">LGPL</A>, the RegXmaker GUI and command line utilities are licensed under the <A HREF="gpl.txt">GPL</A>, this document and other documentation are licensed under the <A HREF="fdl.txT">FDL</A>.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="1">1. File Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/filemenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu contains commands that deal with global actions such as loading and saving files, and processing data. Please note that the first three icons and the last three icons on the top toolbar correspond to the six commands in this menu.<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you try to add more than three data sources in the Free Edition an error message will be displayed.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="11">1.1. Add File.  </A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/add-file.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will add a local file to the list of data sources. After clicking on this button a dialog box, similar to the one below, will appear and allow you to select which file to load. <BR>
+<BR><CENTER><IMG SRC="images/filedialog.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The file will be processed in accordance to the text encoding set in the Options/Text Encoding menu and if the encoding is incorrect the file might not load. The file will be loaded and its path and a <IMG SRC="images/stringP-FILE.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (file) icon will be displayed in the list on the left side. Binary files can also be processed. Please note that files larger than 8 megabytes might not load.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="12">1.2. Add URL.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/add-url.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will add a remote file to the list of data sources. Once you click on this button a dialog, like the one below will ask you to enter the location of the remote file.<BR>
+
+<BR><CENTER><IMG SRC="images/urldialog1.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After you enter the url into the dialog and click on "OK" the program will verify whether the url you entered is valid. If the url is not valid you will be shown an error message, similar to the one below.<BR>
+
+<BR><CENTER><IMG SRC="images/urlerror.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This error message does not mean the remote file does not exist or cannot be accessed, rather it simply means that the format of the url you specified is not valid. There are several reasons why this might happen. One example of such is that a protocol must always be present in a url. www.yahoo.com is not a valid url rather http://www.yahoo.com is, http being the protocol.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the url you specified "passes the test" a confirm dialog is shown, similar to the one below.<BR>
+
+<BR><CENTER><IMG SRC="images/urldialog2.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This dialog is just to let you know that this operation may take several minutes and might not work if you are not connected to the source where the remote file is located (such as the Internet or a LAN). If you decide to proceed, click on "Yes" and if everything goes ok the file will be loaded from the URL specified. The file will be processed in accordance to the text encoding set in the Options/Text Encoding menu and if the encoding is incorrect the file might not load. The file will be loaded and its path and a <IMG SRC="images/stringP-URL.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (web) icon will be displayed in the list on the left side. Remote binary files can also be processed. Please note that files larger than 8 megabytes might not load.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="13">1.3. Add String.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/add-string.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will add a user-specified string to the list of data sources. A window will popup on the right "work" area of the screen where the user can enter a string. It will appear similar to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/stringdialog.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When you are finished you can click on the <IMG SRC="images/add-string.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (add string) icon in that window to save changes. If you attempt to close this window with any text inside the window a "close confirm" dialog will be shown, similar to the one below.<BR>
+
+<BR><CENTER><IMG SRC="images/stringsave.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you decide not to save the string by clicking on "No", the edit window will close. If you decide to cancel the close operation by clicking on "Cancel", you will be taken back to the edit window and allowed to enter more text. If you decide to save the string, by clicking "Yes" on the "close confirm" dialog or by clicking on the <IMG SRC="images/add-string.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (add string) icon, the entered text will be saved to the data source list.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text encoding set in the Options/Text Encoding menu does not affect this command. The string will be displayed in the list of data sources on the left side with a <IMG SRC="images/stringP-STRING.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (string) icon.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="14">1.4. Output File.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/outputfile.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command sets the filename to which the program will output results when processing is done. Clicking on this button will show a file select dialog similar to the one shown for adding files. If the output file is set you will also be prompted whether you want to view the results. You must have the proper permissions to write to the directory and/or file specified. If the file already exists you will be prompted whether to overwrite it or not in a dialog similar to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/overwrite.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you select to overwrite the existing file, it will not be changed until you decide to process the data sources. If you choose not to replace the selected file, the output file setting will not change. If you want to clear the output file setting use the <A HREF="#15">Clear Output File.</A> If you process data sources and write results to the output file, repeating the operation will overwrite the file.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="15">1.5. Clear Output File.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/outputfilec.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will clear the output file option. If the output file setting is cleared (or not set) and you process the data source the results will only be displayed on the screen. A confirmation message will be displayed similar to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/clearconfirm.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+This is simply to let you know that the setting has been cleared<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="16">1.6. Process.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/process.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command takes given data sources, compares them and generates the corresponding regular expression in accordance with the "Options" menu. If there are no data sources present an error message will be shown similar to the one below.<BR>
+
+<BR><CENTER><IMG SRC="images/noprocess.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When executing a process windows will appear on the right side allowing you to terminate processing by clicking the "Cancel Process" button. You can also copy the contents of the process window to the system clipboard by simply clicking the "To Clipboard" button. You can see an example of a process window below.<BR>
+
+<BR><CENTER><IMG SRC="images/exprocess.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The process window will let you know what is going on while you wait for the program to generate the regular expression for the data sources. The process window will list important steps as they are being performed and will let you know if the process times out or if an error occurs.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processing terminates automatically after a time interval set in "Customize"/"Set Process Timeout" option. The results of the process will be either written to file or displayed on the screen in a separate window.<BR><BR>
+
+<CENTER>Here is an example of the result prompt after output has been written to file:</CENTER>
+
+<BR><CENTER><IMG SRC="images/scprocess.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This prompt gives you information that can be helpful in deciding whether to display the output on the screen. First the prompt lets you know exactly where the result has been written. Second, it reports the size of the result in number of characters. This is important since the output file is written using the character encoding specified in "Options"/"Text Format" and the number of bytes in the output file may be larger than the actual number of characters. If you decide to display the result on screen a result window is shown. It is of the same type as the one shown if no output file is set.<BR><BR>
+
+<CENTER>Here is an example of a result window:</CENTER>
+
+<BR><CENTER><IMG SRC="images/reprocess.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a rule of the program <B>at most</B> one processing window may be open at any given time. This means that if you click on the process button again and a processing window is already open (or minimized), the program will take you to that window rather than starting to process again. This does not mean that at most one result window can be opened. Since the processing windows are separate from the result window you can have <B>many</B> result windows open. This means you can process, close processing window, change options or data sources, process again and be able to compare the two outputs side-by-side.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="17">1.7. Exit.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/exit.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command exits the program. If "Customize"/"Save Settings on Exit" is enabled your settings will be saved when exiting.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="2">2. List Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/listmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu and the corresponding vertical toolbar contain commands can be used to manage the list of data sources that appear on the left side. This menu is disabled if nothing is selected from the list or if the list is empty. This menu will also appear as a pop-up menu if you click anywhere on the list (except its toolbar) with any mouse button except the left one (right-click behavior in Windows).<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="21">2.1. Preview.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/preview.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command displays the selected data source on the screen in a separate window in the blue work area on the right side, similar to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/previewframe.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The content of the data source being previewed <B>cannot</B> be edited in the preview window. You may choose to edit the item by clicking on the <IMG SRC="images/edit.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (edit) icon on a toolbar located on the top of the preview window. Please refer to the <A HREF="#22">edit procedures</A> for information on how editing is performed. Please note that if you preview a binary files, only viewable characters will be displayed.	<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="22">2.2. Edit.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/edit.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command lets you edit a selected data source even if it is a file or an URL. The data is edited only in memory and is not reflected in the original file. The editing is done in a window in the blue work area on the right side, similar to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/editframe.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When done just click on the <IMG SRC="images/save-disk.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0> (save) icon to save your changes. Closing the window will prompt you to save changes. Refer to <A HREF="#13">Add String Procedure</A> for more information on using the "confirm close" dialog.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="23">2.3. Remove.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/remove.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will remove the selected data source from the list. The original file is not deleted. Be careful when using this option because there is no confirm dialog. Once the button is clicked the data source is instantly removed.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="24">2.4. Clear.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/remove-all.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command clears the entire list of data sources. Original files are not affected. Be careful when using this option because there is no confirm dialog. Once the button is clicked the data sources is instantly removed.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="3">3. Edit Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/editmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu contains text edition operations. Different functions in this menu will enabled or disabled depending on the type of window. This menu will also appear as a pop-up menu if you click anywhere on an editable area (such as a preview window) with any mouse button except the left one (right-click behavior in Windows).<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="31">3.1. Cut.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/cut24.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will delete the selected text and copy it into the operating system's clipboard.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="32">3.2. Copy.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/copy24.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will copy the selected text into the operating system's clipboard.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="33">3.3. Paste.</A></B></BIG></I>
+&nbsp;&nbsp;<IMG SRC="images/paste24.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will paste text from the operating system's clipboard into an editable area. Pasting will replace any currently selected text.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="34">3.4. Select All.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command selects all the text in a specified editable area.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="35">3.5. Word Wrap.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This flag enables or disables word-wrapping in the specified window and for all new windows that will be created after the flag is set. Currently opened windows are not affected. If you switch back to a previously opened window with word-wrap disabled any new windows will also have word-wrap disabled.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="4">4. Options Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/optionsmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu sets different options used for processing.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="41">4.1. Compile Level.</A></B></BIG></I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/compilemenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These levels define how specific resulting regex will be. <BR>
+
+<DL>
+<DT><B>Deep Compile</B><DD>Will list all possible cases from the list of sources. Example: if data sources are "abc" and "def" the resulting regex is /[ad][be][df]/.
+<DT>&nbsp;
+<DT><B>Semi-Deep Compile</B><DD>The resulting regular expression will contain range of highest to lowest example cases between the static sections of the given strings. Example: for strings "a0" and "f4" the resulting regex is /[a-f][0-4]/.
+<DT>&nbsp;
+<DT><B>Surface Compile</B><DD>The resulting regular expression will contain only types of cases between the static sections of the given strings. Example: for strings "a1B" and "c2D" the resulting regex is /[a-z][0-9][A-Z]/.
+<DT>&nbsp;
+<DT><B>No Compile</B><DD>Will only show static sections with dynamic ones shown as ".*". Example: for strings "1abcdefg2" and "1hijklmnop2" the resulting regular expression is /a.*g/.
+</DL>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="42">4.2. Accuracy Level.</A></B></BIG></I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/accuracymenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This specifies what is considered a match between data sources. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The choices are:
+
+<DL>
+<DT><B>Letter Accuracy</B>
+   <DD>A single letter is considered a match.
+   <DT>&nbsp;
+<DT><B>Word Accuracy</B>
+   <DD>Word accuracy is based on the average word size of 5 letters.
+   <DT>&nbsp;
+<DT><B>Line Accuracy</B>
+   <DD>Line accuracy is based on  standard line size of 80 letters.
+</DL>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accuracy levels are based on letter counts instead of the language concept of "word" and "line" in order to allow different accuracy levels for binary files.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="43">4.3. Text Format.</A></B></BIG></I>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/textmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These define different encodings used. Available encodings are:
+
+<DL>
+<DT><B>US-ASCII</B>
+  <DD>Seven-bit ASCII, a.k.a. ISO646-US, a.k.a. the Basic Latin block of the Unicode character set 
+
+<DT><B>ISO-8859-1</B>
+  <DD>ISO Latin Alphabet No. 1, a.k.a. ISO-LATIN-1 
+
+<DT><B>UTF-8</B>
+  <DD>Eight-bit Unicode Transformation Format 
+
+<DT><B>UTF-16BE</B>
+  <DD>Sixteen-bit Unicode Transformation Format, big-endian byte order 
+
+<DT><B>UTF-16LE</B>
+  <DD>Sixteen-bit Unicode Transformation Format, little-endian byte order 
+
+<DT><B>UTF-16</B>
+  <DD>Sixteen-bit Unicode Transformation Format, byte order specified by a mandatory initial byte-order mark (either order accepted on input, big-endian used on output) 
+
+</DL>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is an <B>advanced</B> option. Do not change anything unless you know what you are doing. Refer to sections above to find out how this setting affects loading local and remote files as well as writing output. For more information see <A HREF="http://www.unicode.org">www.unicode.org</A>.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="5">5. Customize Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/custommenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu contains different customization options for the visual interface and the overall program.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="51">5.1. Tool Bar.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option indicates whether the horizontal "command" toolbar is displayed. A sample horizontal "command" toolbar is shown below.
+
+<BR><CENTER><IMG SRC="images/htoolbar.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="52">5.2. List Tool Bar.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option indicates whether the vertical "list" toolbar is displayed. A sample vertical "list" toolbar is shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/vtoolbar.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="53">5.3. Outline Frame Dragging.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option indicates whether the outline of the window is shown when dragged or the entire window is redrawn while dragging.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="54">5.4. Set Process Timeout.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option sets a timeout period for processing. The limit if in seconds and has a default value of 600   seconds or 10 minutes. When this limit is reached processing is terminated. This is designed to stop the program for freezing or processing for a long time. If a timeout value is set that is different than the default, it will be shown in the "Set Timeout" dialog next time you try to set the timeout value, as shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/timeout.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When the timeout value is set a confirmation message will be shown similar to the one below.<BR>
+
+<BR><CENTER><IMG SRC="images/timeoutset.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="55">5.5. Load Settings on Startup.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option indicates whether the program should load saved settings on startup. You must save settings after changing this option if you do not have "Save Settings on Exit" turned on in order for this option to take effect.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="56">5.6. Save Settings on Exit</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option indicates whether the program should save settings on exit. The value of this option will tell the program whether to save settings or not as it exits. <BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="57">5.7. Save Settings.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option saves current settings to a file named RegXmaker.properties. You cannot change the filename of the settings file. The program will confirm that settings have been saved in a similar dialog to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/setsave.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="58">5.8. Load Settings.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This option loads settings from a file named RegXmaker.properties. You cannot change the filename of the settings file. Before settings are loaded from the file you will be asked to confirm that you want to override your current settings by loading new ones from a file. Below is a sample confirm dialog for loading settings.<BR>
+
+<BR><CENTER><IMG SRC="images/setload1.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you decide to load settings from the file the program will confirm that settings have been loaded in a similar dialog to the one shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/setload2.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="6">6. Window Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/windowmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu manages different windows in the program. This menu will also appear as a pop-up menu if you click anywhere on the blue right-hand work area (excluding open windows) with any mouse button except the left one (right-click behavior in Windows).<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="61">6.1. Cascade.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command arranges all open windows in a pyramid-like formation.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="62">6.2. Tile Vertical.  </A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command tiles all open windows vertically.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="63">6.3. Tile Horizontal.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command tiles all open windows horizontally.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="64">6.4. Close All.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command closes all open windows.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="65">6.5. More Windows.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sometimes more windows are opened that can be displayed in the window list on the bottom of the menu. In that case you can select this option to view all open windows. In the "More Windows" dialog you will have a choice of switching to a desired open window or closing open windows. A sample "More Windows" dialog is shown below.<BR>
+
+<BR><CENTER><IMG SRC="images/more.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0></CENTER><BR>
+<BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="7">7. Help Menu.</A></B></BIG></BIG>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<IMG SRC="images/helpmenu.gif" ALIGN=ABSMIDDLE HSPACE=0 BORDER=0>
+<BR><BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This menu contains different help options.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="71">7.1. User Guide.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will display this document.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="72">7.2. License.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command displays the license. You can also <A HREF="license.html">click here</A> to access the license.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="73">7.3. Register.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This information is no longer applicable.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<I><BIG><B><A NAME="74">7.4. About.</A></B></BIG></I><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will display a dialog box with version information, registration code and product ids.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+<BIG><BIG><B><A NAME="8">8. Command-line Version.</A></B></BIG></BIG><BR><BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The command line version is started using your java runtime command and including the reg*l.jar and reg*p.jar files in the class path. The class name for the command line version <B>com.solidmatrix.regxmaker.ui.RegXMakerCmd</B>. It can also be executed using an included batch file if your are running on Windows.<BR><BR>
+
+<A HREF="#contents">Back to top</A><BR><BR>
+
+</BODY></HTML>
